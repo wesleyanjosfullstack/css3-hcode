@@ -1,16 +1,30 @@
 @charset "UTF-8";
 
-.page {
-    background-image: url('https://picsum.photos/id/1/1440/720');
+body {
+    background-color: #17181c;
+    color: #fff;
+    font-family: sans-serif;
 }
 
-div.block {
-    width: 500px;
-    height: 500px;
-    border: 1px solid #000;
-    background-color: blue;
+.pulse {
+    background: none;
+    color: #ff760c;
+    border: 2px solid;
+    margin: 50px;
+    padding: 15px 40px;
+    transition: .5s;
 }
 
-.block {
-    background-color: red !important;
+.pulse:hover, .pulse:focus {
+    color: #fff;
+    border-color: #ef8f6e;
+    cursor: pointer;
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    animation: pulse 1s;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #ef8f6e;
+    }
 }
